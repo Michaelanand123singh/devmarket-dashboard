@@ -49,7 +49,7 @@ function ServiceList() {
 
   const handleCreate = async (values) => {
     try {
-      await axios.post("http://localhost:8000/product/creatProducts", values);
+      await axios.post("https://devmarketbackend-1.onrender.com/product/creatProducts", values);
       setIsCreateModalOpen(false);
       fetchServices();
     } catch (err) {
