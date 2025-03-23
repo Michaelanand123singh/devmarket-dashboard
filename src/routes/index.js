@@ -21,48 +21,48 @@ const routes = [
   component: Dashboard, // view rendered
   },
  
-  {
-    path: '/team',
-    component: Teams,
-  },
+  // {
+  //   path: '/team',
+  //   component: Teams,
+  // },
   
-  {
-    path: '/About',
-    component: About,
-  },
+  // {
+  //   path: '/About',
+  //   component: About,
+  // },
 
-  {
-    path: '/Career',
-    component: Carrier,
-  },
-  {
-    path: '/Job',
-    component: FinanceAccounting,
-  },
-  {
-    path: '/Services',
-    component: Servicing,
-  },
+  // {
+  //   path: '/Career',
+  //   component: Carrier,
+  // },
+  // {
+  //   path: '/Job',
+  //   component: FinanceAccounting,
+  // },
+  // {
+  //   path: '/Services',
+  //   component: Servicing,
+  // },
   {
     
     path: '/Product',
     component: ServiceList,
   },
-  {
+  // {
     
-    path: '/testimonial',
-    component: ViewTestimonial
-  },
-  {
+  //   path: '/testimonial',
+  //   component: ViewTestimonial
+  // },
+  // {
     
-    path: '/Contact',
-    component: Contacts
-  },
-  {
+  //   path: '/Contact',
+  //   component: Contacts
+  // },
+  // {
     
-    path: '/Partnership',
-    component: Partnership
-  },
+  //   path: '/Partnership',
+  //   component: Partnership
+  // },
 
   
 ]

@@ -17,7 +17,7 @@ function ServiceList() {
 
    const fetchServices = async () => {
       try {
-         const response = await axios.get("https://tesodtechnologyfinal.onrender.com/services/");
+         const response = await axios.get("http://localhost:8000/services/");
          setServices(Array.isArray(response.data) ? response.data : [response.data]);
       } catch (err) {
          console.error("Failed to fetch services", err);
@@ -26,7 +26,7 @@ function ServiceList() {
 
    const handleDelete = async (serviceId) => {
       try {
-         await axios.delete(`https://tesodtechnologyfinal.onrender.com/services/${serviceId}`);
+         await axios.delete(`http://localhost:8000/services/${serviceId}`);
          setServices(services.filter((service) => service._id !== serviceId));
       } catch (err) {
          console.error("Failed to delete service", err);
@@ -45,7 +45,7 @@ function ServiceList() {
 
    const handleUpdate = async () => {
       try {
-         await axios.put(`https://tesodtechnologyfinal.onrender.com/services/${selectedService._id}`, formData);
+         await axios.put(`http://localhost:8000/services/${selectedService._id}`, formData);
          setSelectedService(null);
          fetchServices();
       } catch (err) {
@@ -55,7 +55,7 @@ function ServiceList() {
 
    const handleCreate = async () => {
       try {
-         await axios.post("https://tesodtechnologyfinal.onrender.com/services/createService", formData);
+         await axios.post("http://localhost:8000/services/createService", formData);
          setIsCreateModalOpen(false);
          resetFormData();
          fetchServices();

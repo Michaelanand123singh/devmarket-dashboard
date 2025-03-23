@@ -12,7 +12,7 @@ function PartnershipList() {
 
    const fetchBrands = async () => {
       try {
-         const response = await axios.get("https://tesodtechnologyfinal.onrender.com/Brand");
+         const response = await axios.get("http://localhost:8000/Brand");
          setBrands(response.data);
       } catch (err) {
          console.error("Failed to fetch brands", err);
@@ -21,7 +21,7 @@ function PartnershipList() {
 
    const deleteBrand = async (id) => {
       try {
-         await axios.delete(`https://tesodtechnologyfinal.onrender.com/Brand/delete/${id}`);
+         await axios.delete(`http://localhost:8000/Brand/delete/${id}`);
          setBrands(brands.filter((brand) => brand._id !== id));
       } catch (err) {
          console.error("Failed to delete brand", err);
@@ -48,7 +48,7 @@ function PartnershipList() {
 
          const cloudinaryUrl = cloudinaryResponse.data.secure_url;
 
-         const response = await axios.post("https://tesodtechnologyfinal.onrender.com/Brand/createBrand", {
+         const response = await axios.post("http://localhost:8000/Brand/createBrand", {
             name: newBrand.name,
             logoUrl: cloudinaryUrl
          });

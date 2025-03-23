@@ -7,62 +7,64 @@ const routes = [
     name: 'Dashboard',
   },
   
-  {
+  // {
     
     
-    name: 'HomePage Management',
-  },
+  //   name: 'HomePage Management',
+  // },
 
-  {
-    path: '/app/About',
+  // {
+  //   path: '/app/About',
   
-    name: 'View-About',
-  },
+  //   name: 'View-About',
+  // },
 
 
   
-  {
+  // {
     
-    name: 'Team Management',
-  },
+  //   name: 'Team Management',
+  // },
 
-  {
-    path: '/app/team',
+  // {
+  //   path: '/app/team',
  
-    name: 'View-Teams',
-  },
+  //   name: 'View-Teams',
+  // },
 
-  {
+  // {
     
  
-    name: 'Career Management',
-  },
-  {
-    path: '/app/Career',
+  //   name: 'Career Management',
+  // },
+  // {
+  //   path: '/app/Career',
    
-    name: 'View-Candidates',
-  },
+  //   name: 'View-Candidates',
+  // },
   
-  {
+  // {
     
  
-    name: 'Job Management',
-  },
-  {
-    path: '/app/Job',
+  //   name: 'Job Management',
+  // },
+  // {
+  //   path: '/app/Job',
     
-    name: 'View-Job',
-  },
-  {
+  //   name: 'View-Job',
+  // },
+  // {
     
  
-    name: 'Service Management',
-  },
-  {
-    path: '/app/Services',
+  //   name: 'Service Management',
+  // },
+  // {
+  //   path: '/app/Services',
 
-    name: 'View-Services',
-  },
+  //   name: 'View-Services',
+  // },
+  
+  
   {
     
  
@@ -73,32 +75,32 @@ const routes = [
 
     name: 'View-Product',
   },
-  {
+  // {
     
  
-    name: 'Testimonial Management',
-  },
-  {
-    path: '/app/Testimonial',
+  //   name: 'Testimonial Management',
+  // },
+  // {
+  //   path: '/app/Testimonial',
 
-    name: 'View-Testimonial',
-  },
-  {
-    name: 'Contact Management',
-  },
-  {
-    path: '/app/Contact',
+  //   name: 'View-Testimonial',
+  // },
+  // {
+  //   name: 'Contact Management',
+  // },
+  // {
+  //   path: '/app/Contact',
 
-    name: 'View-Contact',
-  },
-  {
-    name: 'Partnership Management',
-  },
-  {
-    path: '/app/Partnership',
+  //   name: 'View-Contact',
+  // },
+  // {
+  //   name: 'Partnership Management',
+  // },
+  // {
+  //   path: '/app/Partnership',
    
-    name: 'View-Partners',
-  },
+  //   name: 'View-Partners',
+  // },
   
 ];
 

@@ -23,7 +23,7 @@ function TestimonialList() {
   const fetchTestimonials = async () => {
     try {
       const response = await axios.get(
-        "https://tesodtechnologyfinal.onrender.com/testimonial/Testimonial"
+        "http://localhost:8000/testimonial/Testimonial"
       );
       setTestimonials(
         Array.isArray(response.data) ? response.data : [response.data]
@@ -36,7 +36,7 @@ function TestimonialList() {
   const handleDelete = async (id) => {
     try {
       await axios.delete(
-        `https://tesodtechnologyfinal.onrender.com/testimonial/${id}`
+        `http://localhost:8000/testimonial/${id}`
       );
       setTestimonials(
         testimonials.filter((testimonial) => testimonial._id !== id)
@@ -61,7 +61,7 @@ function TestimonialList() {
     if (!editingTestimonial) return;
     try {
       await axios.put(
-        `https://tesodtechnologyfinal.onrender.com/testimonial/${editingTestimonial._id}`,
+        `http://localhost:8000/testimonial/${editingTestimonial._id}`,
         formData
       );
       setEditingTestimonial(null);
@@ -78,7 +78,7 @@ function TestimonialList() {
     }
     try {
       await axios.post(
-        "https://tesodtechnologyfinal.onrender.com/testimonial/createTestimonail",
+        "http://localhost:8000/testimonial/createTestimonail",
         formData
       );
       setAddingTestimonial(false);

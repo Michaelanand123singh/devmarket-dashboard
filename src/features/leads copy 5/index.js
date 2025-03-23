@@ -17,7 +17,7 @@ const ViewCategoriesPage = () => {
 
   const fetchTeams = async () => {
     try {
-      const response = await axios.get('https://tesodtechnologyfinal.onrender.com/teams/Team');
+      const response = await axios.get('http://localhost:8000/teams/Team');
       setTeams(response.data);
     } catch (err) {
       setError('Failed to fetch teams');
@@ -26,7 +26,7 @@ const ViewCategoriesPage = () => {
 
   const handleAddTeam = async () => {
     try {
-      await axios.post('https://tesodtechnologyfinal.onrender.com/teams/creatTeam', formData);
+      await axios.post('http://localhost:8000/teams/creatTeam', formData);
       setIsAddModalOpen(false);
       setFormData({ name: '', position: '', photo: '' });
       fetchTeams();
@@ -47,7 +47,7 @@ const ViewCategoriesPage = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`https://tesodtechnologyfinal.onrender.com/teams/Team/${id}`);
+      await axios.delete(`http://localhost:8000/teams/Team/${id}`);
       setTeams(teams.filter(team => team._id !== id));
     } catch (err) {
       setError('Failed to delete team member');
@@ -56,7 +56,7 @@ const ViewCategoriesPage = () => {
 
   const handleUpdate = async () => {
     try {
-      await axios.put(`https://tesodtechnologyfinal.onrender.com/teams/Team/${selectedTeam._id}`, formData);
+      await axios.put(`http://localhost:8000/teams/Team/${selectedTeam._id}`, formData);
       setIsEditModalOpen(false);
       setSelectedTeam(null);
       fetchTeams();

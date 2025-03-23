@@ -28,7 +28,7 @@ const FinanceAccounting = () => {
   const fetchJobs = async () => {
     setIsLoading(true);
     try {
-      const response = await axios.get("https://tesodtechnologyfinal.onrender.com/job/job");
+      const response = await axios.get("http://localhost:8000/job/job");
       setJobs(response.data);
       setError(null);
     } catch (err) {
@@ -41,7 +41,7 @@ const FinanceAccounting = () => {
 
   const deleteJob = async (jobId) => {
     try {
-      await axios.delete(`https://tesodtechnologyfinal.onrender.com/job/${jobId}`);
+      await axios.delete(`http://localhost:8000/job/${jobId}`);
       setJobs(jobs.filter((job) => job._id !== jobId));
     } catch (err) {
       alert("Failed to delete job");
@@ -76,7 +76,7 @@ const FinanceAccounting = () => {
         keyResponsibilities: editingJob.keyResponsibilities.split("\n").map((resp) => resp.trim()).filter(resp => resp),
       };
 
-      const response = await axios.put(`https://tesodtechnologyfinal.onrender.com/job/${editingJob._id}`, updatedJob);
+      const response = await axios.put(`http://localhost:8000/job/${editingJob._id}`, updatedJob);
       
       // Update the job in the local state using the response data
       setJobs(jobs.map((job) => (job._id === editingJob._id ? response.data : job)));
@@ -132,7 +132,7 @@ const FinanceAccounting = () => {
         return;
       }
 
-      const response = await axios.post("https://tesodtechnologyfinal.onrender.com/job/createJob", jobData);
+      const response = await axios.post("http://localhost:8000/job/createJob", jobData);
       
       // Add the new job to the state and close the modal
       // Make sure to use the response data which includes the generated _id

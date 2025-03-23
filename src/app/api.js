@@ -3,7 +3,7 @@ import axios from 'axios';
 export const loginUser = async (email, password) => {
     try {
         const response = await axios.post(
-            'https://tesodtechnologyfinal.onrender.com/auth/login',
+            'http://localhost:8000/auth/login',
             { email, password },
             { headers: { 'Content-Type': 'application/json' } }
         );
